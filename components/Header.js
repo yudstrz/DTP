@@ -1,20 +1,39 @@
+// components/Header.js
 import Link from 'next/link'
 
 export default function Header() {
   return (
-    <header className="bg-blue-600 text-white shadow-md">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold">
-          Digital Talent Platform
-        </Link>
-        <nav>
-          <ul className="flex space-x-6">
-            <li><Link href="/profile" className="hover:text-blue-200">Profil</Link></li>
-            <li><Link href="/assessment" className="hover:text-blue-200">Asesmen</Link></li>
-            <li><Link href="/recommendations" className="hover:text-blue-200">Rekomendasi</Link></li>
-            <li><Link href="/dashboard" className="hover:text-blue-200">Dashboard</Link></li>
-          </ul>
-        </nav>
+    <header className="header-container">
+      <div className="container">
+        <div className="flex justify-between items-center py-4">
+          <Link href="/" className="text-2xl font-bold text-gray-800">
+            Digital Talent Platform
+          </Link>
+          <nav>
+            <ul className="flex space-x-6">
+              <li>
+                <Link href="/profile" className="text-gray-600 hover:text-primary font-medium transition-colors">
+                  Profil
+                </Link>
+              </li>
+              <li>
+                <Link href="/assessment" className="text-gray-600 hover:text-primary font-medium transition-colors">
+                  Asesmen
+                </Link>
+              </li>
+              <li>
+                <Link href="/recommendations" className="text-gray-600 hover:text-primary font-medium transition-colors">
+                  Rekomendasi
+                </Link>
+              </li>
+              <li>
+                <Link href="/dashboard" className="text-gray-600 hover:text-primary font-medium transition-colors">
+                  Dashboard
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
   )
